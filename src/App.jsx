@@ -1,15 +1,22 @@
-import { useState } from "react";
-import React from "react";
-import Header from "./Components/Header";
-import Container from "./Components/Container";
+import Home from "./Components/home";
+import Select from "./Components/select";
+import Quiz from "./Components/quiz";
+import Header from "./Components/header";
+// import Result from "./Components/result";
+
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-
   return (
     <>
       <Header />
-      <br />
-      <Container />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Select" element={<Select />} />
+        <Route path="/Quiz" element={<Quiz />} /> 
+        {/* <Route path="/Result" element={<Result />} />  */}
+
+      </Routes>
     </>
   )
 }
